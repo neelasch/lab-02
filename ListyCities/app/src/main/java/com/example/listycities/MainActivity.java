@@ -14,6 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.text.CharacterIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -54,9 +55,16 @@ public class MainActivity extends AppCompatActivity {
                 inputText = (EditText) findViewById(R.id.inputText);
                 String newCity;
                 newCity = String.valueOf(inputText.getText());
-                if (!(newCity.isEmpty())){ //don't add blank text
-                cityAdapter.add(newCity);}
-                inputText.setText("");
+                if (newCity.isEmpty()) {
+                    inputText.setText("type city to add");
+                }else if (newCity.equals("type city to add")){ //prevents this text from being added
+                    newCity = "";
+                    inputText.setText("");
+                }else {
+                    cityAdapter.add(newCity);
+                    inputText.setText("");
+                }
+
             }
         });
         removeButton.setOnClickListener(new View.OnClickListener() {
@@ -67,12 +75,21 @@ public class MainActivity extends AppCompatActivity {
                 inputText = (EditText) findViewById(R.id.inputText);
                 String oldCity;
                 oldCity = String.valueOf(inputText.getText());
+
                 if (oldCity.isEmpty()) {
                     inputText.setText("type city to remove");
-
+                }else if (oldCity.equals("type city to remove")){ //prevents this text from being added
+                    oldCity = "";
+                    inputText.setText("");
+                }else {
+                    cityAdapter.remove(oldCity);
+                    inputText.setText("");
                 }
-                cityAdapter.remove(oldCity);
-                //inputText.setText("");
+
+
+
+
+
             }
 
         });
