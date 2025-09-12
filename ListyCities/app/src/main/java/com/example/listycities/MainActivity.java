@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 }else if (newCity.equals("type city to add")){ //prevents this text from being added
                     newCity = "";
                     inputText.setText("");
+                }else if (newCity.equals("type city to remove")){ //prevents this text from being added
+                    newCity = "";
+                    inputText.setText("");
                 }else {
                     cityAdapter.add(newCity);
                     inputText.setText("");
@@ -78,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if (oldCity.isEmpty()) {
                     inputText.setText("type city to remove");
+                }else if (oldCity.equals("type city to remove")){ //prevents this text from being added
+                    oldCity = "";
+                    inputText.setText("");
                 }else if (oldCity.equals("type city to remove")){ //prevents this text from being added
                     oldCity = "";
                     inputText.setText("");
