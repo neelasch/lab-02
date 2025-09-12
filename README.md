@@ -2,12 +2,14 @@
 
 ## Student Details
 
-- **Full Name:** `<Enter name>`
-- **CCID:** `<Enter ccid>`
+- **Full Name:** Nicholas Elaschuk
+- **CCID:** neelasch
 
 ## References and Resources
 
-List any resources used here, or simply put `N/A` if not applicable.
+https://www.youtube.com/watch?v=hDBawW_Yqho& 
+https://www.youtube.com/watch?v=VsgXFdynDuQ 
+https://www.youtube.com/watch?v=Eiw5kRObUS0
 
 ## Verbal Collaboration
 
